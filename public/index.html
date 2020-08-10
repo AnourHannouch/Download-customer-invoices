@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download PDFs</title>
+
+<script src="./js/script.js"></script>
+
+
+</head>
+<body>
+<h1>Download Customer Invoices</h1>
+<p>This is a small app to download all customer invoices from Visma eAccounting as PDFs to a defined folder on your computer.</p>
+<p>This applications requests a token using authorization code flow and therfore needs to be hosted.</p>
+
+<form id="form1">
+  Client ID: <input type="text" id="clientid" required><br>
+  Client Secret: <input type="text" id="clientsecret" required><br>
+  Redirect URI: <input type="text" id="redirecturi" required><br>
+  <input type="button" value="Authorize" id="authbutton"><br>
+</form>
+
+<br><br>
+<form id="form2">
+  Code: <input type="text" id="Tcode" readonly><br>
+  Token: <input type="text" id="token" readonly><br>
+  <input type="button" value="GET Invoices as PDFs" id="GETbutton">
+</form>
+
+
+<!-- I could also define the URL -->
+
+<br><br>
+<table id="Mtable">
+  <tr>
+    <th><table id="IItable">
+      <tr>
+        <th>Invoice ID</th>
+      </tr>
+    </table></th>
+
+    <th><table id="URLtable">
+      <tr>
+        <th>Temporary URL to pdf</th>
+      </tr>
+    </table></th> 
+  </tr>
+
+</table>
+
+
+</body>
+</html>
